@@ -183,7 +183,7 @@ void nanolidar::receive_task(void)
 			}
 			if (read_size == 1 && MsgsID[0] == 0x10)
 			{
-				read_size = read(fd, Description, 5);
+				read_size = read(fd, Description, 6);
 				// printf("Getting Data Discription------------(%d)\n", read_size);
 				// for (int i = 0; i < read_size; i++)
 				// 	printf("%d, ", Description[i]);

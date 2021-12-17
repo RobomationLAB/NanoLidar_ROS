@@ -1,5 +1,13 @@
 <launch>
 	<node name="nanolidar_f" pkg="nanolidar" type="nanolidar">
+		<param name="port" value="/dev/ttyUSB1" />
+		<param name="frame_id" value="laser_frame" />
+		<param name="scan_topic" value="/scan" />	
+	</node>
+</launch>
+
+<!-- <launch>
+	<node name="nanolidar_f" pkg="nanolidar" type="nanolidar">
 		<param name="port" value="/dev/front_laser" />
 		<param name="frame_id" value="laser_frame" />
 		<param name="scan_topic" value="/scan" />
@@ -11,4 +19,4 @@
 	</node>
 	<node pkg="tf" type="static_transform_publisher" name="base_link_to_front_laser" args="0.18 0 0 0 0 0 /base_link /laser_frame 100"/>
 	<node pkg="tf" type="static_transform_publisher" name="base_link_to_rear_laser" args="-0.18 0 0 3.14 0 0 /base_link /laser_frame2 100"/>
-</launch>
+</launch> -->
